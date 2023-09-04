@@ -7,7 +7,7 @@ import java.util.Scanner;
 //        Если число отрицательное или равно нулю, программа должна выбрасывать исключение
 //        task_1.InvalidNumberException с сообщением "Некорректное число". В противном случае,
 //        программа должна выводить сообщение "Число корректно".
-public class Main {
+public class task_1 {
     public static void main(String[] args) throws InvalidNumberException {
         Scanner input = new Scanner(System.in);
         System.out.print("enter an integer: ");
