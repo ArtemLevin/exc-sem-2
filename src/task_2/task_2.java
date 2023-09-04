@@ -1,7 +1,5 @@
 package task_2;
 
-import task_1.InvalidNumberException;
-
 import java.util.Scanner;
 
 //Задача 2:
@@ -13,7 +11,7 @@ import java.util.Scanner;
 //        класса Exception. Это позволяет нам определить специфическую причину ошибки и передать информацию
 //        об ошибке для последующей обработки.
 public class task_2{
-    public static void main(String[] args) throws InvalidNumberException {
+    public static void main(String[] args) throws DivisionByZeroException {
         Scanner input = new Scanner(System.in);
         System.out.print("enter dividend: ");
         int dividend = input.nextInt();
@@ -21,13 +19,13 @@ public class task_2{
         int divisor = input.nextInt();
         try{
             if (divisor == 0){
-                throw new InvalidNumberException("division by zero is not allowed");
+                throw new DivisionByZeroException("division by zero is not allowed");
             }
 
             double result = dividend/divisor;
             System.out.println("division result: " + result);
         }
-        catch (InvalidNumberException e){
+        catch (DivisionByZeroException e){
             System.out.println("division by zero is not allowed");
         }
         input.close();
